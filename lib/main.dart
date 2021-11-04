@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePage(),
     );
   }
@@ -137,7 +135,8 @@ class _VideoPlayerWidgetState extends State<VideoPlayerWidget> {
   void dispose() {
     _betterPlayerController.dispose();
 
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
+        overlays: SystemUiOverlay.values);
     SystemChrome.setPreferredOrientations(DeviceOrientation.values);
     super.dispose();
   }
